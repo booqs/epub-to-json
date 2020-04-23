@@ -6,7 +6,7 @@ export type XmlStringParserInput = {
     removeTrailingWhitespaces?: boolean,
 };
 
-export function xmlStringParser(input: XmlStringParserInput): XmlDocument | undefined {
+export function xmlParser(input: XmlStringParserInput): XmlDocument | undefined {
     try {
         let tree = parseXmlLib(input.xmlString, {
             preserveComments: input.preserveComments || false,
